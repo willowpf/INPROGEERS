@@ -248,6 +248,7 @@
             this.buttonComputeCircle.TabIndex = 20;
             this.buttonComputeCircle.Text = "Compute";
             this.buttonComputeCircle.UseVisualStyleBackColor = true;
+            this.buttonComputeCircle.Click += new System.EventHandler(this.buttonComputeCircle_Click);
             // 
             // buttonComputeTriangle
             // 
@@ -258,6 +259,7 @@
             this.buttonComputeTriangle.TabIndex = 21;
             this.buttonComputeTriangle.Text = "Compute";
             this.buttonComputeTriangle.UseVisualStyleBackColor = true;
+            this.buttonComputeTriangle.Click += new System.EventHandler(this.buttonComputeTriangle_Click);
             // 
             // buttonComputeSquare
             // 
@@ -268,6 +270,7 @@
             this.buttonComputeSquare.TabIndex = 22;
             this.buttonComputeSquare.Text = "Compute";
             this.buttonComputeSquare.UseVisualStyleBackColor = true;
+            this.buttonComputeSquare.Click += new System.EventHandler(this.buttonComputeSquare_Click);
             // 
             // buttonComputeRectangle
             // 
@@ -278,6 +281,7 @@
             this.buttonComputeRectangle.TabIndex = 23;
             this.buttonComputeRectangle.Text = "Compute";
             this.buttonComputeRectangle.UseVisualStyleBackColor = true;
+            this.buttonComputeRectangle.Click += new System.EventHandler(this.buttonComputeRectangle_Click);
             // 
             // groupBoxCircle
             // 

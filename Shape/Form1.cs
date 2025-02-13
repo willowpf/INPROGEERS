@@ -72,26 +72,40 @@ namespace Shape
             DisplayResults("Rectangle", "Yellow", 4, length * width, 2 * (length + width));
         }
 
+
+        private double totalArea = 0;
+        private double totalPerimeter = 0;
+
         private void DisplayResults(string shapeName, string color, int sides, double area, double perimeter)
         {
+            // Accumulate area and perimeter
+            totalArea += area;
+            totalPerimeter += perimeter;
+
+            // Display results in a MessageBox
+            MessageBox.Show(
+                $"Shape: {shapeName}\n" +
+                $"Color: {color}\n" +
+                $"No. of Sides: {sides}\n" +
+                $"Total Area: {totalArea:0.##}\n" +
+                $"Total Perimeter: {totalPerimeter:0.##}",
+                "Computation Result",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+
+            // (Optional) Also update the labels in the form
             labelName.Text = "Name: " + shapeName;
             labelColor.Text = "Color: " + color;
             labelSides.Text = "No. of Sides: " + sides;
-            labelArea.Text = "Area: " + area.ToString("0.##");
-            labelPerimeter.Text = "Perimeter: " + perimeter.ToString("0.##");
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
+            labelArea.Text = "Total Area: " + totalArea.ToString("0.##");
+            labelPerimeter.Text = "Total Perimeter: " + totalPerimeter.ToString("0.##");
+        
 
-        }
+    }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
+    private void label1_Click(object sender, EventArgs e) { }
+        private void groupBox1_Enter(object sender, EventArgs e) { }
+        private void pictureBox3_Click(object sender, EventArgs e) { }
     }
 }
